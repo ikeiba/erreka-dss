@@ -29,7 +29,7 @@ warnings.filterwarnings('ignore') # Suppress pandas chained assignment warnings 
 
 # --- SECTION 1: DATA LOADING ---
 
-def load_data(data_dir: str = "../datasets"):
+def load_data(data_dir: str = "datasets"):
     """Loads all necessary CSV files from the specified directory."""
     path = Path(data_dir)
     
@@ -292,7 +292,7 @@ def main():
     print(f"\nModeling dataset successfully saved to: {output_path}")
     
     # 6. Train and Rank (Now passing the path to original maintenance file)
-    train_evaluate_and_rank(final_modeling_df, "../datasets/erreka_maintenance_history.csv")
+    train_evaluate_and_rank(final_modeling_df, "datasets/erreka_maintenance_history.csv")
 
 if __name__ == "__main__":
     main()
