@@ -9,6 +9,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import os
 from dotenv import load_dotenv
+# Load environment variables
+load_dotenv()
 
 # MySQL credentials
 DB_HOST = os.getenv("MYSQL_HOST", "127.0.0.1") 
