@@ -159,4 +159,4 @@ if __name__ == "__main__":
     print(mantenimiento_actualizado[['door_id', 'failed_next_30_days', 'probability_score', 'risk_level']].sort_values(by='probability_score', ascending=False).head(10))
 
     # Store in a csv
-    mantenimiento_actualizado.to_csv("../datasets/erreka_maintenance_history_updated.csv", index=False)
+    mantenimiento_actualizado.to_csv("erreka_maintenance_history_updated.csv", index=False)
