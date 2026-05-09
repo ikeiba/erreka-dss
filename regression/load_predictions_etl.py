@@ -22,7 +22,7 @@ DB_PORT = int(os.getenv("MYSQL_PORT", "3306"))
 # ----------------------------------------------------------
 # Define the new table name and the path to the predicted dataset
 TABLE_NAME = "predicted_maintenance_history"
-FILE_PATH = "predicted_maintenance_history.csv" # Adjust to "Datasets/..." if you moved the file there
+FILE_PATH = "regression/predicted_maintenance_history.csv" # Adjust to "Datasets/..." if you moved the file there
 
 # ----------------------------------------------------------
 # 4. CREATE CONNECTION TO MYSQL
