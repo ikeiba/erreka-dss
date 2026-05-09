@@ -14,7 +14,7 @@ load_dotenv()
 DB_HOST = os.getenv("MYSQL_HOST", "127.0.0.1") 
 DB_USER = os.getenv("MYSQL_USER", "root")
 DB_PASSWORD = os.getenv("ROOT_PASSWORD")
-DB_NAME = os.getenv("MYSQL_DATABASE", "erreka_dss_demo")
+DB_NAME = os.getenv("MYSQL_DATABASE", "erreka_dss")
 DB_PORT = int(os.getenv("MYSQL_PORT", "3306"))
 
 # ----------------------------------------------------------
@@ -22,7 +22,7 @@ DB_PORT = int(os.getenv("MYSQL_PORT", "3306"))
 # ----------------------------------------------------------
 # Define the new table name and the path to the predicted dataset
 TABLE_NAME = "predicted_maintenance_history"
-FILE_PATH = "../datasets/predicted_maintenance_history.csv" # Adjust to "Datasets/..." if you moved the file there
+FILE_PATH = "predicted_maintenance_history.csv" # Adjust to "Datasets/..." if you moved the file there
 
 # ----------------------------------------------------------
 # 4. CREATE CONNECTION TO MYSQL

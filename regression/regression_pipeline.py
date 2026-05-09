@@ -8,7 +8,7 @@ It specifically prevents Temporal Data Leakage by calculating operational featur
 Output: 
 - Evaluates the model on historical data.
 - Generates a ranked list of doors currently active, sorted by urgency.
-- Saves the final modeling dataset to 'data/regression_failure.csv'.
+- Saves the final modeling dataset to 'regression_failure.csv'.
 """
 
 import pandas as pd
@@ -29,7 +29,7 @@ warnings.filterwarnings('ignore') # Suppress pandas chained assignment warnings 
 
 # --- SECTION 1: DATA LOADING ---
 
-def load_data(data_dir: str = "data"):
+def load_data(data_dir: str = "../datasets"):
     """Loads all necessary CSV files from the specified directory."""
     path = Path(data_dir)
     
@@ -266,7 +266,7 @@ def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
     maintenance_update_df['days_to_next_failure'] = maintenance_update_df['door_id'].map(prediction_map)
     
     # Export the final populated dataset
-    output_path = Path("data/predicted_maintenance_history.csv")
+    output_path = Path("predicted_maintenance_history.csv")
     maintenance_update_df.to_csv(output_path, index=False)
     print(f"Predictions successfully merged and saved to: {output_path}")
 
@@ -286,13 +286,13 @@ def main():
     final_modeling_df = build_modeling_dataset(temporal_features_df, maintenance_df)
     
     # 5. Save the final formatted modeling table
-    output_path = Path("data/regression_failure.csv")
+    output_path = Path("regression_failure.csv")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     final_modeling_df.to_csv(output_path, index=False)
     print(f"\nModeling dataset successfully saved to: {output_path}")
     
     # 6. Train and Rank (Now passing the path to original maintenance file)
-    train_evaluate_and_rank(final_modeling_df, "data/erreka_maintenance_history.csv")
+    train_evaluate_and_rank(final_modeling_df, "../datasets/erreka_maintenance_history.csv")
 
 if __name__ == "__main__":
     main()
