@@ -13,7 +13,7 @@ DB_PORT = int(os.getenv("MYSQL_PORT", "3306"))
 engine = create_engine(f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
 # Read the csv with the predictions
-RUTA_CSV_NUEVO = "datasets/erreka_maintenance_history_updated.csv" 
+RUTA_CSV_NUEVO = "../datasets/erreka_maintenance_history_updated.csv" 
 df_actualizado = pd.read_csv(RUTA_CSV_NUEVO)
 
 # We take only door_id and the updated columns
