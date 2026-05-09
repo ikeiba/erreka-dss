@@ -1,7 +1,12 @@
+import os
+
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ─────────────────────────────────────────────
 # CONFIGURATION
@@ -9,8 +14,8 @@ from sqlalchemy import create_engine, text
 MYSQL_HOST     = "localhost"
 MYSQL_PORT     = 3306
 MYSQL_USER     = "root"
-MYSQL_PASSWORD = "deusto"
-MYSQL_DB       = "erreka_dss"
+MYSQL_PASSWORD = os.getenv("ROOT_PASSWORD")
+MYSQL_DB       = os.getenv("MYSQL_DATABASE", "erreka_dss")
 
 CONTAMINATION  = 0.10  # fracción esperada de puertas anómalas (~10%)
 
