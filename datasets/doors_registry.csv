@@ -1,0 +1,505 @@
+door_id,country_id,country_name,door_type,usage_scenario,installation_environment,customer_type,context_criticality_id
+P-ES-000001,ES,Spain,ECOline Pedestrian,low,Office,B2B,CC01
+P-ES-000002,ES,Spain,ECOline Pedestrian,low,Office,B2B,CC01
+P-ES-000003,ES,Spain,ECOline Pedestrian,low,Office,B2B,CC01
+P-ES-000004,ES,Spain,ECOline Pedestrian,low,Office,B2B,CC01
+P-ES-000005,ES,Spain,ECOline Pedestrian,low,Office,B2B,CC01
+P-ES-000006,ES,Spain,ECOline Pedestrian,low,Office,B2B,CC01
+P-ES-000007,ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-ES-000008,ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-ES-000009,ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-ES-000010,ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-ES-000011,ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-ES-000012,ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-ES-000013,ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-ES-000014,ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ES-000015,ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ES-000016,ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ES-000017,ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ES-000018,ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ES-000019,ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ES-000020,ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ES-000021,ES,Spain,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-ES-000022,ES,Spain,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-ES-000023,ES,Spain,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-ES-000024,ES,Spain,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-ES-000025,ES,Spain,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-ES-000026,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000027,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000028,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000029,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000030,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000031,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000032,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000033,ES,Spain,ECOline Home,low,Domestic,B2C,CC05
+G-ES-000034,ES,Spain,ECOline Home,moderate,Community,B2C,CC05
+G-ES-000035,ES,Spain,ECOline Home,moderate,Community,B2C,CC05
+G-ES-000036,ES,Spain,ECOline Home,moderate,Community,B2C,CC05
+G-ES-000037,ES,Spain,ECOline Home,moderate,Community,B2C,CC05
+P-FR-000038,FR,France,ECOline Pedestrian,low,Office,B2B,CC01
+P-FR-000039,FR,France,ECOline Pedestrian,low,Office,B2B,CC01
+P-FR-000040,FR,France,ECOline Pedestrian,low,Office,B2B,CC01
+P-FR-000041,FR,France,ECOline Pedestrian,low,Office,B2B,CC01
+P-FR-000042,FR,France,ECOline Pedestrian,low,Office,B2B,CC01
+P-FR-000043,FR,France,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-FR-000044,FR,France,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-FR-000045,FR,France,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-FR-000046,FR,France,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-FR-000047,FR,France,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-FR-000048,FR,France,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-FR-000049,FR,France,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-FR-000050,FR,France,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-FR-000051,FR,France,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-FR-000052,FR,France,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-FR-000053,FR,France,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-FR-000054,FR,France,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-FR-000055,FR,France,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-FR-000056,FR,France,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-FR-000057,FR,France,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-FR-000058,FR,France,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-FR-000059,FR,France,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-FR-000060,FR,France,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-FR-000061,FR,France,ECOline Home,low,Domestic,B2C,CC05
+G-FR-000062,FR,France,ECOline Home,low,Domestic,B2C,CC05
+G-FR-000063,FR,France,ECOline Home,low,Domestic,B2C,CC05
+G-FR-000064,FR,France,ECOline Home,low,Domestic,B2C,CC05
+G-FR-000065,FR,France,ECOline Home,low,Domestic,B2C,CC05
+G-FR-000066,FR,France,ECOline Home,low,Domestic,B2C,CC05
+G-FR-000067,FR,France,ECOline Home,low,Domestic,B2C,CC05
+G-FR-000068,FR,France,ECOline Home,moderate,Community,B2C,CC05
+G-FR-000069,FR,France,ECOline Home,moderate,Community,B2C,CC05
+G-FR-000070,FR,France,ECOline Home,moderate,Community,B2C,CC05
+G-FR-000071,FR,France,ECOline Home,moderate,Community,B2C,CC05
+P-DE-000072,DE,Germany,ECOline Pedestrian,low,Office,B2B,CC01
+P-DE-000073,DE,Germany,ECOline Pedestrian,low,Office,B2B,CC01
+P-DE-000074,DE,Germany,ECOline Pedestrian,low,Office,B2B,CC01
+P-DE-000075,DE,Germany,ECOline Pedestrian,low,Office,B2B,CC01
+P-DE-000076,DE,Germany,ECOline Pedestrian,low,Office,B2B,CC01
+P-DE-000077,DE,Germany,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-DE-000078,DE,Germany,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-DE-000079,DE,Germany,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-DE-000080,DE,Germany,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-DE-000081,DE,Germany,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-DE-000082,DE,Germany,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-DE-000083,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000084,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000085,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000086,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000087,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000088,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000089,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000090,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000091,DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-DE-000092,DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-DE-000093,DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-DE-000094,DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-DE-000095,DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-DE-000096,DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-DE-000097,DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-DE-000098,DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-DE-000099,DE,Germany,ECOline Home,low,Domestic,B2C,CC05
+G-DE-000100,DE,Germany,ECOline Home,low,Domestic,B2C,CC05
+G-DE-000101,DE,Germany,ECOline Home,low,Domestic,B2C,CC05
+G-DE-000102,DE,Germany,ECOline Home,low,Domestic,B2C,CC05
+G-DE-000103,DE,Germany,ECOline Home,low,Domestic,B2C,CC05
+G-DE-000104,DE,Germany,ECOline Home,low,Domestic,B2C,CC05
+G-DE-000105,DE,Germany,ECOline Home,low,Domestic,B2C,CC05
+G-DE-000106,DE,Germany,ECOline Home,moderate,Community,B2C,CC05
+G-DE-000107,DE,Germany,ECOline Home,moderate,Community,B2C,CC05
+G-DE-000108,DE,Germany,ECOline Home,moderate,Community,B2C,CC05
+G-DE-000109,DE,Germany,ECOline Home,moderate,Community,B2C,CC05
+P-IT-000110,IT,Italy,ECOline Pedestrian,low,Office,B2B,CC01
+P-IT-000111,IT,Italy,ECOline Pedestrian,low,Office,B2B,CC01
+P-IT-000112,IT,Italy,ECOline Pedestrian,low,Office,B2B,CC01
+P-IT-000113,IT,Italy,ECOline Pedestrian,low,Office,B2B,CC01
+P-IT-000114,IT,Italy,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IT-000115,IT,Italy,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IT-000116,IT,Italy,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IT-000117,IT,Italy,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IT-000118,IT,Italy,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IT-000119,IT,Italy,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-IT-000120,IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IT-000121,IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IT-000122,IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IT-000123,IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IT-000124,IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IT-000125,IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IT-000126,IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IT-000127,IT,Italy,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IT-000128,IT,Italy,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IT-000129,IT,Italy,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IT-000130,IT,Italy,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-IT-000131,IT,Italy,ECOline Home,low,Domestic,B2C,CC05
+G-IT-000132,IT,Italy,ECOline Home,low,Domestic,B2C,CC05
+G-IT-000133,IT,Italy,ECOline Home,low,Domestic,B2C,CC05
+G-IT-000134,IT,Italy,ECOline Home,low,Domestic,B2C,CC05
+G-IT-000135,IT,Italy,ECOline Home,low,Domestic,B2C,CC05
+G-IT-000136,IT,Italy,ECOline Home,low,Domestic,B2C,CC05
+G-IT-000137,IT,Italy,ECOline Home,low,Domestic,B2C,CC05
+G-IT-000138,IT,Italy,ECOline Home,moderate,Community,B2C,CC05
+G-IT-000139,IT,Italy,ECOline Home,moderate,Community,B2C,CC05
+G-IT-000140,IT,Italy,ECOline Home,moderate,Community,B2C,CC05
+P-UK-000141,UK,United Kingdom,ECOline Pedestrian,low,Office,B2B,CC01
+P-UK-000142,UK,United Kingdom,ECOline Pedestrian,low,Office,B2B,CC01
+P-UK-000143,UK,United Kingdom,ECOline Pedestrian,low,Office,B2B,CC01
+P-UK-000144,UK,United Kingdom,ECOline Pedestrian,low,Office,B2B,CC01
+P-UK-000145,UK,United Kingdom,ECOline Pedestrian,low,Office,B2B,CC01
+P-UK-000146,UK,United Kingdom,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-UK-000147,UK,United Kingdom,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-UK-000148,UK,United Kingdom,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-UK-000149,UK,United Kingdom,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-UK-000150,UK,United Kingdom,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-UK-000151,UK,United Kingdom,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-UK-000152,UK,United Kingdom,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-UK-000153,UK,United Kingdom,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-UK-000154,UK,United Kingdom,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-UK-000155,UK,United Kingdom,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-UK-000156,UK,United Kingdom,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-UK-000157,UK,United Kingdom,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-UK-000158,UK,United Kingdom,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-UK-000159,UK,United Kingdom,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-UK-000160,UK,United Kingdom,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-UK-000161,UK,United Kingdom,ECOline Home,low,Domestic,B2C,CC05
+G-UK-000162,UK,United Kingdom,ECOline Home,low,Domestic,B2C,CC05
+G-UK-000163,UK,United Kingdom,ECOline Home,low,Domestic,B2C,CC05
+G-UK-000164,UK,United Kingdom,ECOline Home,low,Domestic,B2C,CC05
+G-UK-000165,UK,United Kingdom,ECOline Home,low,Domestic,B2C,CC05
+G-UK-000166,UK,United Kingdom,ECOline Home,low,Domestic,B2C,CC05
+G-UK-000167,UK,United Kingdom,ECOline Home,low,Domestic,B2C,CC05
+G-UK-000168,UK,United Kingdom,ECOline Home,moderate,Community,B2C,CC05
+G-UK-000169,UK,United Kingdom,ECOline Home,moderate,Community,B2C,CC05
+P-PT-000170,PT,Portugal,ECOline Pedestrian,low,Office,B2B,CC01
+P-PT-000171,PT,Portugal,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-PT-000172,PT,Portugal,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-PT-000173,PT,Portugal,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-PT-000174,PT,Portugal,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-PT-000175,PT,Portugal,ECOline Home,low,Domestic,B2C,CC05
+G-PT-000176,PT,Portugal,ECOline Home,low,Domestic,B2C,CC05
+G-PT-000177,PT,Portugal,ECOline Home,moderate,Community,B2C,CC05
+P-PL-000178,PL,Poland,ECOline Pedestrian,low,Office,B2B,CC01
+P-PL-000179,PL,Poland,ECOline Pedestrian,low,Office,B2B,CC01
+P-PL-000180,PL,Poland,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-PL-000181,PL,Poland,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-PL-000182,PL,Poland,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-PL-000183,PL,Poland,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-PL-000184,PL,Poland,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-PL-000185,PL,Poland,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-PL-000186,PL,Poland,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-PL-000187,PL,Poland,ECOline Home,low,Domestic,B2C,CC05
+G-PL-000188,PL,Poland,ECOline Home,low,Domestic,B2C,CC05
+G-PL-000189,PL,Poland,ECOline Home,low,Domestic,B2C,CC05
+G-PL-000190,PL,Poland,ECOline Home,moderate,Community,B2C,CC05
+P-TR-000191,TR,Turkey,ECOline Pedestrian,low,Office,B2B,CC01
+P-TR-000192,TR,Turkey,ECOline Pedestrian,low,Office,B2B,CC01
+P-TR-000193,TR,Turkey,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-TR-000194,TR,Turkey,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-TR-000195,TR,Turkey,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-TR-000196,TR,Turkey,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-TR-000197,TR,Turkey,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-TR-000198,TR,Turkey,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-TR-000199,TR,Turkey,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-TR-000200,TR,Turkey,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-TR-000201,TR,Turkey,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-TR-000202,TR,Turkey,ECOline Home,low,Domestic,B2C,CC05
+G-TR-000203,TR,Turkey,ECOline Home,low,Domestic,B2C,CC05
+G-TR-000204,TR,Turkey,ECOline Home,low,Domestic,B2C,CC05
+G-TR-000205,TR,Turkey,ECOline Home,moderate,Community,B2C,CC05
+P-MA-000206,MA,Morocco,ECOline Pedestrian,low,Office,B2B,CC01
+P-MA-000207,MA,Morocco,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-MA-000208,MA,Morocco,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-MA-000209,MA,Morocco,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-MA-000210,MA,Morocco,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-MA-000211,MA,Morocco,ECOline Home,low,Domestic,B2C,CC05
+G-MA-000212,MA,Morocco,ECOline Home,moderate,Community,B2C,CC05
+P-EG-000213,EG,Egypt,ECOline Pedestrian,low,Office,B2B,CC01
+P-EG-000214,EG,Egypt,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-EG-000215,EG,Egypt,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-EG-000216,EG,Egypt,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-EG-000217,EG,Egypt,ECOline Home,low,Domestic,B2C,CC05
+G-EG-000218,EG,Egypt,ECOline Home,moderate,Community,B2C,CC05
+P-IN-000219,IN,India,ECOline Pedestrian,low,Office,B2B,CC01
+P-IN-000220,IN,India,ECOline Pedestrian,low,Office,B2B,CC01
+P-IN-000221,IN,India,ECOline Pedestrian,low,Office,B2B,CC01
+P-IN-000222,IN,India,ECOline Pedestrian,low,Office,B2B,CC01
+P-IN-000223,IN,India,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IN-000224,IN,India,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IN-000225,IN,India,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IN-000226,IN,India,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IN-000227,IN,India,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IN-000228,IN,India,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-IN-000229,IN,India,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-IN-000230,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000231,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000232,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000233,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000234,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000235,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000236,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000237,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000238,IN,India,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-IN-000239,IN,India,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IN-000240,IN,India,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IN-000241,IN,India,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IN-000242,IN,India,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IN-000243,IN,India,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IN-000244,IN,India,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-IN-000245,IN,India,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-IN-000246,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000247,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000248,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000249,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000250,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000251,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000252,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000253,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000254,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000255,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000256,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000257,IN,India,ECOline Home,low,Domestic,B2C,CC05
+G-IN-000258,IN,India,ECOline Home,moderate,Community,B2C,CC05
+G-IN-000259,IN,India,ECOline Home,moderate,Community,B2C,CC05
+G-IN-000260,IN,India,ECOline Home,moderate,Community,B2C,CC05
+G-IN-000261,IN,India,ECOline Home,moderate,Community,B2C,CC05
+G-IN-000262,IN,India,ECOline Home,moderate,Community,B2C,CC05
+P-CN-000263,CN,China,ECOline Pedestrian,low,Office,B2B,CC01
+P-CN-000264,CN,China,ECOline Pedestrian,low,Office,B2B,CC01
+P-CN-000265,CN,China,ECOline Pedestrian,low,Office,B2B,CC01
+P-CN-000266,CN,China,ECOline Pedestrian,low,Office,B2B,CC01
+P-CN-000267,CN,China,ECOline Pedestrian,low,Office,B2B,CC01
+P-CN-000268,CN,China,ECOline Pedestrian,low,Office,B2B,CC01
+P-CN-000269,CN,China,ECOline Pedestrian,low,Office,B2B,CC01
+P-CN-000270,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000271,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000272,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000273,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000274,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000275,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000276,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000277,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CN-000278,CN,China,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-CN-000279,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000280,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000281,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000282,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000283,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000284,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000285,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000286,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000287,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000288,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000289,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000290,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000291,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000292,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000293,CN,China,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CN-000294,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000295,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000296,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000297,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000298,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000299,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000300,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000301,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000302,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CN-000303,CN,China,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-CN-000304,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000305,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000306,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000307,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000308,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000309,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000310,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000311,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000312,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000313,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000314,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000315,CN,China,ECOline Home,low,Domestic,B2C,CC05
+G-CN-000316,CN,China,ECOline Home,moderate,Community,B2C,CC05
+G-CN-000317,CN,China,ECOline Home,moderate,Community,B2C,CC05
+G-CN-000318,CN,China,ECOline Home,moderate,Community,B2C,CC05
+G-CN-000319,CN,China,ECOline Home,moderate,Community,B2C,CC05
+G-CN-000320,CN,China,ECOline Home,moderate,Community,B2C,CC05
+G-CN-000321,CN,China,ECOline Home,moderate,Community,B2C,CC05
+P-JP-000322,JP,Japan,ECOline Pedestrian,low,Office,B2B,CC01
+P-JP-000323,JP,Japan,ECOline Pedestrian,low,Office,B2B,CC01
+P-JP-000324,JP,Japan,ECOline Pedestrian,low,Office,B2B,CC01
+P-JP-000325,JP,Japan,ECOline Pedestrian,low,Office,B2B,CC01
+P-JP-000326,JP,Japan,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-JP-000327,JP,Japan,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-JP-000328,JP,Japan,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-JP-000329,JP,Japan,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-JP-000330,JP,Japan,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-JP-000331,JP,Japan,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-JP-000332,JP,Japan,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-JP-000333,JP,Japan,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-JP-000334,JP,Japan,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-JP-000335,JP,Japan,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-JP-000336,JP,Japan,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-JP-000337,JP,Japan,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-JP-000338,JP,Japan,ECOline Home,low,Domestic,B2C,CC05
+G-JP-000339,JP,Japan,ECOline Home,low,Domestic,B2C,CC05
+G-JP-000340,JP,Japan,ECOline Home,low,Domestic,B2C,CC05
+G-JP-000341,JP,Japan,ECOline Home,low,Domestic,B2C,CC05
+G-JP-000342,JP,Japan,ECOline Home,moderate,Community,B2C,CC05
+P-AU-000343,AU,Australia,ECOline Pedestrian,low,Office,B2B,CC01
+P-AU-000344,AU,Australia,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-AU-000345,AU,Australia,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-AU-000346,AU,Australia,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-AU-000347,AU,Australia,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-AU-000348,AU,Australia,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-AU-000349,AU,Australia,ECOline Home,low,Domestic,B2C,CC05
+G-AU-000350,AU,Australia,ECOline Home,low,Domestic,B2C,CC05
+G-AU-000351,AU,Australia,ECOline Home,low,Domestic,B2C,CC05
+G-AU-000352,AU,Australia,ECOline Home,moderate,Community,B2C,CC05
+P-US-000353,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000354,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000355,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000356,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000357,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000358,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000359,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000360,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000361,US,United States,ECOline Pedestrian,low,Office,B2B,CC01
+P-US-000362,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000363,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000364,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000365,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000366,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000367,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000368,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000369,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000370,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-US-000371,US,United States,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-US-000372,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000373,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000374,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000375,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000376,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000377,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000378,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000379,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000380,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000381,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000382,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000383,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000384,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000385,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000386,US,United States,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-US-000387,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000388,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000389,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000390,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000391,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000392,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000393,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000394,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000395,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000396,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-US-000397,US,United States,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-US-000398,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000399,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000400,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000401,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000402,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000403,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000404,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000405,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000406,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000407,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000408,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000409,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000410,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000411,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000412,US,United States,ECOline Home,low,Domestic,B2C,CC05
+G-US-000413,US,United States,ECOline Home,moderate,Community,B2C,CC05
+G-US-000414,US,United States,ECOline Home,moderate,Community,B2C,CC05
+G-US-000415,US,United States,ECOline Home,moderate,Community,B2C,CC05
+G-US-000416,US,United States,ECOline Home,moderate,Community,B2C,CC05
+G-US-000417,US,United States,ECOline Home,moderate,Community,B2C,CC05
+G-US-000418,US,United States,ECOline Home,moderate,Community,B2C,CC05
+P-CA-000419,CA,Canada,ECOline Pedestrian,low,Office,B2B,CC01
+P-CA-000420,CA,Canada,ECOline Pedestrian,low,Office,B2B,CC01
+P-CA-000421,CA,Canada,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-CA-000422,CA,Canada,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-CA-000423,CA,Canada,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CA-000424,CA,Canada,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CA-000425,CA,Canada,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CA-000426,CA,Canada,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-CA-000427,CA,Canada,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-CA-000428,CA,Canada,ECOline Home,low,Domestic,B2C,CC05
+G-CA-000429,CA,Canada,ECOline Home,low,Domestic,B2C,CC05
+G-CA-000430,CA,Canada,ECOline Home,low,Domestic,B2C,CC05
+G-CA-000431,CA,Canada,ECOline Home,moderate,Community,B2C,CC05
+P-MX-000432,MX,Mexico,ECOline Pedestrian,low,Office,B2B,CC01
+P-MX-000433,MX,Mexico,ECOline Pedestrian,low,Office,B2B,CC01
+P-MX-000434,MX,Mexico,ECOline Pedestrian,low,Office,B2B,CC01
+P-MX-000435,MX,Mexico,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-MX-000436,MX,Mexico,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-MX-000437,MX,Mexico,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-MX-000438,MX,Mexico,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-MX-000439,MX,Mexico,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-MX-000440,MX,Mexico,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-MX-000441,MX,Mexico,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-MX-000442,MX,Mexico,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-MX-000443,MX,Mexico,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-MX-000444,MX,Mexico,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-MX-000445,MX,Mexico,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-MX-000446,MX,Mexico,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-MX-000447,MX,Mexico,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-MX-000448,MX,Mexico,ECOline Home,low,Domestic,B2C,CC05
+G-MX-000449,MX,Mexico,ECOline Home,low,Domestic,B2C,CC05
+G-MX-000450,MX,Mexico,ECOline Home,low,Domestic,B2C,CC05
+G-MX-000451,MX,Mexico,ECOline Home,low,Domestic,B2C,CC05
+G-MX-000452,MX,Mexico,ECOline Home,low,Domestic,B2C,CC05
+G-MX-000453,MX,Mexico,ECOline Home,low,Domestic,B2C,CC05
+G-MX-000454,MX,Mexico,ECOline Home,low,Domestic,B2C,CC05
+G-MX-000455,MX,Mexico,ECOline Home,moderate,Community,B2C,CC05
+G-MX-000456,MX,Mexico,ECOline Home,moderate,Community,B2C,CC05
+G-MX-000457,MX,Mexico,ECOline Home,moderate,Community,B2C,CC05
+G-MX-000458,MX,Mexico,ECOline Home,moderate,Community,B2C,CC05
+P-BR-000459,BR,Brazil,ECOline Pedestrian,low,Office,B2B,CC01
+P-BR-000460,BR,Brazil,ECOline Pedestrian,low,Office,B2B,CC01
+P-BR-000461,BR,Brazil,ECOline Pedestrian,low,Office,B2B,CC01
+P-BR-000462,BR,Brazil,ECOline Pedestrian,low,Office,B2B,CC01
+P-BR-000463,BR,Brazil,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-BR-000464,BR,Brazil,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-BR-000465,BR,Brazil,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+P-BR-000466,BR,Brazil,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-BR-000467,BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-BR-000468,BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-BR-000469,BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-BR-000470,BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-BR-000471,BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-BR-000472,BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-BR-000473,BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-BR-000474,BR,Brazil,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-BR-000475,BR,Brazil,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-BR-000476,BR,Brazil,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-BR-000477,BR,Brazil,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+I-BR-000478,BR,Brazil,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-BR-000479,BR,Brazil,ECOline Home,low,Domestic,B2C,CC05
+G-BR-000480,BR,Brazil,ECOline Home,low,Domestic,B2C,CC05
+G-BR-000481,BR,Brazil,ECOline Home,low,Domestic,B2C,CC05
+G-BR-000482,BR,Brazil,ECOline Home,low,Domestic,B2C,CC05
+G-BR-000483,BR,Brazil,ECOline Home,low,Domestic,B2C,CC05
+G-BR-000484,BR,Brazil,ECOline Home,low,Domestic,B2C,CC05
+G-BR-000485,BR,Brazil,ECOline Home,low,Domestic,B2C,CC05
+G-BR-000486,BR,Brazil,ECOline Home,moderate,Community,B2C,CC05
+G-BR-000487,BR,Brazil,ECOline Home,moderate,Community,B2C,CC05
+G-BR-000488,BR,Brazil,ECOline Home,moderate,Community,B2C,CC05
+P-CL-000489,CL,Chile,ECOline Pedestrian,low,Office,B2B,CC01
+P-CL-000490,CL,Chile,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-CL-000491,CL,Chile,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CL-000492,CL,Chile,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-CL-000493,CL,Chile,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-CL-000494,CL,Chile,ECOline Home,low,Domestic,B2C,CC05
+G-CL-000495,CL,Chile,ECOline Home,low,Domestic,B2C,CC05
+G-CL-000496,CL,Chile,ECOline Home,moderate,Community,B2C,CC05
+P-ZA-000497,ZA,South Africa,ECOline Pedestrian,low,Office,B2B,CC01
+P-ZA-000498,ZA,South Africa,ECOline Pedestrian,intensive,Retail/Hospital,B2B,CC02
+I-ZA-000499,ZA,South Africa,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ZA-000500,ZA,South Africa,ROLLfast Industrial 300,moderate,Standard Dock,B2B,CC03
+I-ZA-000501,ZA,South Africa,ROLLfast Industrial 300,intensive,High Speed Door,B2B,CC04
+G-ZA-000502,ZA,South Africa,ECOline Home,low,Domestic,B2C,CC05
+G-ZA-000503,ZA,South Africa,ECOline Home,low,Domestic,B2C,CC05
+G-ZA-000504,ZA,South Africa,ECOline Home,moderate,Community,B2C,CC05

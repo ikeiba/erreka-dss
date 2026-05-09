@@ -1,0 +1,11 @@
+alert_type_id,alert_type,description,technical_severity,potential_operational_impact,safety_related
+AT01,Door blocked during closing,Door stopped while closing due to obstacle detection,medium,medium,yes
+AT02,Repeated obstruction detected,Multiple consecutive obstacle detections in a short period,medium,high,yes
+AT03,Safety sensor failure,One or more safety sensors not responding,high,high,yes
+AT04,Unexpected emergency stop,Emergency stop activated without manual input,high,high,yes
+AT05,Motor overload detected,Motor current exceeds normal operating limits,high,medium,no
+AT06,Abnormal vibration levels,Vibration exceeds expected thresholds indicating possible mechanical issues,medium,medium,no
+AT07,Door not reaching end position,Door fails to fully open or close within expected time,medium,medium,no
+AT08,Excessive cycle frequency,Door operating far above expected daily cycles,low,medium,no
+AT09,Communication loss with door,No data received from door within expected interval,high,high,no
+AT10,Electric lock malfunction,Lock does not engage or disengage correctly,medium,low,no

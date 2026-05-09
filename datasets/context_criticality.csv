@@ -1,0 +1,7 @@
+context_criticality_id,customer_type,environment_type,criticality_level,sla_category
+CC01,B2B,Office,medium,Standard
+CC02,B2B,Retail/Hospital,very high,Critical
+CC03,B2B,Standard Dock,high,High Priority
+CC04,B2B,High Speed Door,very high,Critical
+CC05,B2C,Domestic,low,Basic
+CC06,B2C,Residential Community,medium,Standard

@@ -1,0 +1,19 @@
+door_type,usage_scenario,installation_environment,criticality_level,operational_complexity,maintenance_intensity,estimated_cycles_day
+ECOline Pedestrian,low,Office,medium,medium,low,120
+ECOline Pedestrian,moderate,Office,medium,medium,medium,400
+ECOline Pedestrian,intensive,Office,high,medium,high,800
+ECOline Pedestrian,low,Retail/Hospital,high,medium,medium,120
+ECOline Pedestrian,moderate,Retail/Hospital,high,medium,high,400
+ECOline Pedestrian,intensive,Retail/Hospital,very high,medium,very high,800
+ROLLfast Industrial 300,low,Standard Dock,high,high,medium,100
+ROLLfast Industrial 300,moderate,Standard Dock,high,high,high,200
+ROLLfast Industrial 300,intensive,Standard Dock,very high,high,very high,800
+ROLLfast Industrial 300,low,High Speed Door,very high,very high,high,100
+ROLLfast Industrial 300,moderate,High Speed Door,very high,very high,very high,200
+ROLLfast Industrial 300,intensive,High Speed Door,very high,very high,very high,800
+ECOline Home,low,Domestic,low,low,low,10
+ECOline Home,moderate,Domestic,medium,low,medium,100
+ECOline Home,intensive,Domestic,high,medium,high,200
+ECOline Home,low,Community,medium,low,medium,10
+ECOline Home,moderate,Community,high,medium,high,100
+ECOline Home,intensive,Community,very high,medium,very high,200

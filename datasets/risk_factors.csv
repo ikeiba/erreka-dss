@@ -1,0 +1,18 @@
+risk_factor_id,risk_factor,description,door_type,usage_scenario,risk_dimension
+RF01,High pedestrian flow,Continuous flow of people increases probability of incidents,ECOline Pedestrian,intensive,safety
+RF02,Sensor saturation risk,Simultaneous detections reduce accuracy of presence sensors,ECOline Pedestrian,intensive,reliability
+RF03,Accelerated mechanical wear,Frequent daily cycles increase wear of moving components,ECOline Pedestrian,moderate,reliability
+RF04,Accelerated mechanical wear,Frequent daily cycles increase wear of moving components,ECOline Pedestrian,intensive,reliability
+RF05,Critical access dependency,Door availability is essential for healthcare or high-traffic environments,ECOline Pedestrian,intensive,service continuity
+
+RF06,Forklift traffic dependency,Door downtime disrupts logistics operations,ROLLfast Industrial 300,moderate,service continuity
+RF07,High-speed operation hazard,Fast door movement increases accident severity,ROLLfast Industrial 300,intensive,safety
+RF08,Structural stress under load,Heavy door leaf under intensive usage increases failure probability,ROLLfast Industrial 300,intensive,reliability
+RF09,Dock congestion impact,Door failure creates operational bottlenecks in docks,ROLLfast Industrial 300,moderate,service continuity
+
+RF10,Shared residential usage,Multiple users increase misuse and abnormal operations,ECOline Home,moderate,reliability
+RF11,Shared residential usage,Multiple users increase misuse and abnormal operations,ECOline Home,intensive,reliability
+RF12,Limited preventive supervision,Domestic installations have fewer preventive checks,ECOline Home,low,reliability
+RF13,Vehicle and pedestrian safety risk,Unexpected door movement can affect vehicles or people,ECOline Home,moderate,safety
+RF14,Vehicle and pedestrian safety risk,Unexpected door movement can affect vehicles or people,ECOline Home,intensive,safety
+RF15,Essential access blockage,Door failure blocks critical residential access,ECOline Home,intensive,service continuity

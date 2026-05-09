@@ -1,0 +1,121 @@
+country_id,country_name,door_type,usage_scenario,installation_environment,installed_doors,customer_type
+ES,Spain,ECOline Pedestrian,low,Office,800,B2B
+ES,Spain,ECOline Pedestrian,intensive,Retail/Hospital,900,B2B
+ES,Spain,ROLLfast Industrial 300,moderate,Standard Dock,1000,B2B
+ES,Spain,ROLLfast Industrial 300,intensive,High Speed Door,700,B2B
+ES,Spain,ECOline Home,low,Domestic,1100,B2C
+ES,Spain,ECOline Home,moderate,Community,500,B2C
+FR,France,ECOline Pedestrian,low,Office,700,B2B
+FR,France,ECOline Pedestrian,intensive,Retail/Hospital,900,B2B
+FR,France,ROLLfast Industrial 300,moderate,Standard Dock,900,B2B
+FR,France,ROLLfast Industrial 300,intensive,High Speed Door,600,B2B
+FR,France,ECOline Home,low,Domestic,900,B2C
+FR,France,ECOline Home,moderate,Community,500,B2C
+DE,Germany,ECOline Pedestrian,low,Office,700,B2B
+DE,Germany,ECOline Pedestrian,intensive,Retail/Hospital,800,B2B
+DE,Germany,ROLLfast Industrial 300,moderate,Standard Dock,1200,B2B
+DE,Germany,ROLLfast Industrial 300,intensive,High Speed Door,900,B2B
+DE,Germany,ECOline Home,low,Domestic,900,B2C
+DE,Germany,ECOline Home,moderate,Community,500,B2C
+IT,Italy,ECOline Pedestrian,low,Office,600,B2B
+IT,Italy,ECOline Pedestrian,intensive,Retail/Hospital,800,B2B
+IT,Italy,ROLLfast Industrial 300,moderate,Standard Dock,900,B2B
+IT,Italy,ROLLfast Industrial 300,intensive,High Speed Door,600,B2B
+IT,Italy,ECOline Home,low,Domestic,900,B2C
+IT,Italy,ECOline Home,moderate,Community,400,B2C
+UK,United Kingdom,ECOline Pedestrian,low,Office,700,B2B
+UK,United Kingdom,ECOline Pedestrian,intensive,Retail/Hospital,800,B2B
+UK,United Kingdom,ROLLfast Industrial 300,moderate,Standard Dock,700,B2B
+UK,United Kingdom,ROLLfast Industrial 300,intensive,High Speed Door,600,B2B
+UK,United Kingdom,ECOline Home,low,Domestic,900,B2C
+UK,United Kingdom,ECOline Home,moderate,Community,300,B2C
+PT,Portugal,ECOline Pedestrian,low,Office,200,B2B
+PT,Portugal,ECOline Pedestrian,intensive,Retail/Hospital,200,B2B
+PT,Portugal,ROLLfast Industrial 300,moderate,Standard Dock,250,B2B
+PT,Portugal,ROLLfast Industrial 300,intensive,High Speed Door,150,B2B
+PT,Portugal,ECOline Home,low,Domestic,300,B2C
+PT,Portugal,ECOline Home,moderate,Community,100,B2C
+PL,Poland,ECOline Pedestrian,low,Office,250,B2B
+PL,Poland,ECOline Pedestrian,intensive,Retail/Hospital,250,B2B
+PL,Poland,ROLLfast Industrial 300,moderate,Standard Dock,450,B2B
+PL,Poland,ROLLfast Industrial 300,intensive,High Speed Door,300,B2B
+PL,Poland,ECOline Home,low,Domestic,350,B2C
+PL,Poland,ECOline Home,moderate,Community,200,B2C
+TR,Turkey,ECOline Pedestrian,low,Office,250,B2B
+TR,Turkey,ECOline Pedestrian,intensive,Retail/Hospital,300,B2B
+TR,Turkey,ROLLfast Industrial 300,moderate,Standard Dock,500,B2B
+TR,Turkey,ROLLfast Industrial 300,intensive,High Speed Door,400,B2B
+TR,Turkey,ECOline Home,low,Domestic,350,B2C
+TR,Turkey,ECOline Home,moderate,Community,200,B2C
+MA,Morocco,ECOline Pedestrian,low,Office,120,B2B
+MA,Morocco,ECOline Pedestrian,intensive,Retail/Hospital,150,B2B
+MA,Morocco,ROLLfast Industrial 300,moderate,Standard Dock,220,B2B
+MA,Morocco,ROLLfast Industrial 300,intensive,High Speed Door,180,B2B
+MA,Morocco,ECOline Home,low,Domestic,200,B2C
+MA,Morocco,ECOline Home,moderate,Community,130,B2C
+EG,Egypt,ECOline Pedestrian,low,Office,120,B2B
+EG,Egypt,ECOline Pedestrian,intensive,Retail/Hospital,180,B2B
+EG,Egypt,ROLLfast Industrial 300,moderate,Standard Dock,200,B2B
+EG,Egypt,ROLLfast Industrial 300,intensive,High Speed Door,180,B2B
+EG,Egypt,ECOline Home,low,Domestic,200,B2C
+EG,Egypt,ECOline Home,moderate,Community,120,B2C
+IN,India,ECOline Pedestrian,low,Office,600,B2B
+IN,India,ECOline Pedestrian,intensive,Retail/Hospital,900,B2B
+IN,India,ROLLfast Industrial 300,moderate,Standard Dock,1300,B2B
+IN,India,ROLLfast Industrial 300,intensive,High Speed Door,900,B2B
+IN,India,ECOline Home,low,Domestic,1600,B2C
+IN,India,ECOline Home,moderate,Community,700,B2C
+CN,China,ECOline Pedestrian,low,Office,900,B2B
+CN,China,ECOline Pedestrian,intensive,Retail/Hospital,1200,B2B
+CN,China,ROLLfast Industrial 300,moderate,Standard Dock,2000,B2B
+CN,China,ROLLfast Industrial 300,intensive,High Speed Door,1400,B2B
+CN,China,ECOline Home,low,Domestic,1700,B2C
+CN,China,ECOline Home,moderate,Community,800,B2C
+JP,Japan,ECOline Pedestrian,low,Office,500,B2B
+JP,Japan,ECOline Pedestrian,intensive,Retail/Hospital,600,B2B
+JP,Japan,ROLLfast Industrial 300,moderate,Standard Dock,700,B2B
+JP,Japan,ROLLfast Industrial 300,intensive,High Speed Door,400,B2B
+JP,Japan,ECOline Home,low,Domestic,600,B2C
+JP,Japan,ECOline Home,moderate,Community,200,B2C
+AU,Australia,ECOline Pedestrian,low,Office,200,B2B
+AU,Australia,ECOline Pedestrian,intensive,Retail/Hospital,250,B2B
+AU,Australia,ROLLfast Industrial 300,moderate,Standard Dock,300,B2B
+AU,Australia,ROLLfast Industrial 300,intensive,High Speed Door,200,B2B
+AU,Australia,ECOline Home,low,Domestic,350,B2C
+AU,Australia,ECOline Home,moderate,Community,200,B2C
+US,United States,ECOline Pedestrian,low,Office,1200,B2B
+US,United States,ECOline Pedestrian,intensive,Retail/Hospital,1400,B2B
+US,United States,ROLLfast Industrial 300,moderate,Standard Dock,2100,B2B
+US,United States,ROLLfast Industrial 300,intensive,High Speed Door,1500,B2B
+US,United States,ECOline Home,low,Domestic,2000,B2C
+US,United States,ECOline Home,moderate,Community,800,B2C
+CA,Canada,ECOline Pedestrian,low,Office,250,B2B
+CA,Canada,ECOline Pedestrian,intensive,Retail/Hospital,300,B2B
+CA,Canada,ROLLfast Industrial 300,moderate,Standard Dock,400,B2B
+CA,Canada,ROLLfast Industrial 300,intensive,High Speed Door,250,B2B
+CA,Canada,ECOline Home,low,Domestic,400,B2C
+CA,Canada,ECOline Home,moderate,Community,200,B2C
+MX,Mexico,ECOline Pedestrian,low,Office,400,B2B
+MX,Mexico,ECOline Pedestrian,intensive,Retail/Hospital,500,B2B
+MX,Mexico,ROLLfast Industrial 300,moderate,Standard Dock,700,B2B
+MX,Mexico,ROLLfast Industrial 300,intensive,High Speed Door,500,B2B
+MX,Mexico,ECOline Home,low,Domestic,900,B2C
+MX,Mexico,ECOline Home,moderate,Community,500,B2C
+BR,Brazil,ECOline Pedestrian,low,Office,500,B2B
+BR,Brazil,ECOline Pedestrian,intensive,Retail/Hospital,600,B2B
+BR,Brazil,ROLLfast Industrial 300,moderate,Standard Dock,900,B2B
+BR,Brazil,ROLLfast Industrial 300,intensive,High Speed Door,700,B2B
+BR,Brazil,ECOline Home,low,Domestic,900,B2C
+BR,Brazil,ECOline Home,moderate,Community,400,B2C
+CL,Chile,ECOline Pedestrian,low,Office,150,B2B
+CL,Chile,ECOline Pedestrian,intensive,Retail/Hospital,200,B2B
+CL,Chile,ROLLfast Industrial 300,moderate,Standard Dock,250,B2B
+CL,Chile,ROLLfast Industrial 300,intensive,High Speed Door,200,B2B
+CL,Chile,ECOline Home,low,Domestic,250,B2C
+CL,Chile,ECOline Home,moderate,Community,150,B2C
+ZA,South Africa,ECOline Pedestrian,low,Office,120,B2B
+ZA,South Africa,ECOline Pedestrian,intensive,Retail/Hospital,150,B2B
+ZA,South Africa,ROLLfast Industrial 300,moderate,Standard Dock,220,B2B
+ZA,South Africa,ROLLfast Industrial 300,intensive,High Speed Door,160,B2B
+ZA,South Africa,ECOline Home,low,Domestic,220,B2C
+ZA,South Africa,ECOline Home,moderate,Community,130,B2C
