@@ -7,7 +7,17 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
+import os
+from dotenv import load_dotenv
 
+# MySQL credentials
+DB_HOST = os.getenv("MYSQL_HOST", "127.0.0.1") 
+DB_USER = os.getenv("MYSQL_USER", "root")
+DB_PASSWORD = os.getenv("ROOT_PASSWORD")
+DB_NAME = os.getenv("MYSQL_DATABASE", "erreka_dss_demo")
+DB_PORT = int(os.getenv("MYSQL_PORT", "3306"))
+
+engine = create_engine(f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
 # Conection to mysql
 def obtener_conexion():
@@ -124,9 +134,9 @@ def generar_resultado_final(modelo, engine):
 
     final_df = tabla_hist_completa.copy()
     
-    # Clean original column
-    if 'failed_next_30_days' in final_df.columns:
-        final_df = final_df.drop(columns=['failed_next_30_days'])
+    # Limpiar TODAS las columnas que vas a añadir via merge
+    cols_a_limpiar = ['failed_next_30_days', 'probability_score', 'risk_level']
+    final_df = final_df.drop(columns=[c for c in cols_a_limpiar if c in final_df.columns])
 
     # Merge results
     final_df = final_df.merge(
