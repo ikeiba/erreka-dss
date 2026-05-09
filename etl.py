@@ -24,17 +24,17 @@ DB_PORT = int(os.getenv("MYSQL_PORT", "3306"))
 # ----------------------------------------------------------
 # We create a dictionary where the key is the name of the table and the value is the route to the CSV
 ETL_FILES = {
-    "alert_types": "Datasets/alert_types.csv",
-    "context_criticality": "Datasets/context_criticality.csv",
-    "door_type_usage_catalog": "Datasets/door_type_usage_catalog.csv",
-    "doors_registry": "Datasets/doors_registry.csv",
-    "erreka_maintenance_history": "Datasets/erreka_maintenance_history.csv",
-    "garage_operations_log": "Datasets/garage_operations_log.csv",
-    "incident_events": "Datasets/incident_events.csv",
-    "industrial_operations_log": "Datasets/industrial_operations_log.csv",
-    "pedestrian_operations_log": "Datasets/pedestrian_operations_log.csv",
-    "risk_factors": "Datasets/risk_factors.csv",
-    "installed_base": "Datasets/installed_base.csv"
+    "alert_types": "datasets/alert_types.csv",
+    "context_criticality": "datasets/context_criticality.csv",
+    "door_type_usage_catalog": "datasets/door_type_usage_catalog.csv",
+    "doors_registry": "datasets/doors_registry.csv",
+    "erreka_maintenance_history": "datasets/erreka_maintenance_history.csv",
+    "garage_operations_log": "datasets/garage_operations_log.csv",
+    "incident_events": "datasets/incident_events.csv",
+    "industrial_operations_log": "datasets/industrial_operations_log.csv",
+    "pedestrian_operations_log": "datasets/pedestrian_operations_log.csv",
+    "risk_factors": "datasets/risk_factors.csv",
+    "installed_base": "datasets/installed_base.csv"
 }
 
 # ----------------------------------------------------------
