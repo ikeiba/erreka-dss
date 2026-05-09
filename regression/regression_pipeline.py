@@ -266,7 +266,7 @@ def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
     maintenance_update_df['days_to_next_failure'] = maintenance_update_df['door_id'].map(prediction_map)
     
     # Export the final populated dataset
-    output_path = Path("predicted_maintenance_history.csv")
+    output_path = Path("regression/predicted_maintenance_history.csv")
     maintenance_update_df.to_csv(output_path, index=False)
     print(f"Predictions successfully merged and saved to: {output_path}")
 
@@ -286,7 +286,7 @@ def main():
     final_modeling_df = build_modeling_dataset(temporal_features_df, maintenance_df)
     
     # 5. Save the final formatted modeling table
-    output_path = Path("regression_failure.csv")
+    output_path = Path("regression/regression_failure.csv")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     final_modeling_df.to_csv(output_path, index=False)
     print(f"\nModeling dataset successfully saved to: {output_path}")
