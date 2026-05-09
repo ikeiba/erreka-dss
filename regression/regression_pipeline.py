@@ -8,13 +8,17 @@ It specifically prevents Temporal Data Leakage by calculating operational featur
 Output: 
 - Evaluates the model on historical data.
 - Generates a ranked list of doors currently active, sorted by urgency.
-- Saves the final modeling dataset to 'regression_failure.csv'.
+- Saves the final modeling dataset to 'regression/regression_failure.csv'.
+- Saves predictions to 'regression/predicted_maintenance_history.csv' 
+- DIRECTLY updates the 'predicted_maintenance_history' table in MySQL.
 """
 
+import os
 import pandas as pd
 import numpy as np
-from pathlib import Path
 import warnings
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 # Scikit-Learn tools
 from sklearn.model_selection import train_test_split
@@ -27,24 +31,39 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 warnings.filterwarnings('ignore') # Suppress pandas chained assignment warnings for cleaner output
 
+# ----------------------------------------------------------
+# DATABASE CONFIGURATION
+# ----------------------------------------------------------
+def get_db_engine():
+    """Carga las credenciales del .env y crea la conexión a MySQL."""
+    load_dotenv()
+    DB_HOST = os.getenv("MYSQL_HOST", "127.0.0.1") 
+    DB_USER = os.getenv("MYSQL_USER", "root")
+    DB_PASSWORD = os.getenv("ROOT_PASSWORD")
+    DB_NAME = os.getenv("MYSQL_DATABASE", "erreka_dss_demo")
+    DB_PORT = int(os.getenv("MYSQL_PORT", "3306"))
+
+    engine = create_engine(f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
+    return engine
+
 # --- SECTION 1: DATA LOADING ---
 
-def load_data(data_dir: str = "datasets"):
-    """Loads all necessary CSV files from the specified directory."""
-    path = Path(data_dir)
+def load_data(engine):
+    print("Loading datasets from MySQL database...")
     
-    print("Loading datasets...")
-    incidents_df = pd.read_csv(path / "incident_events.csv")
-    maintenance_df = pd.read_csv(path / "erreka_maintenance_history.csv")
+    incidents_df = pd.read_sql_table("incident_events", con=engine)
+    maintenance_df = pd.read_sql_table("erreka_maintenance_history", con=engine)
     
-    # Load and concatenate all operational logs into a single dataframe
-    ped_logs = pd.read_csv(path / "pedestrian_operations_log.csv")
-    gar_logs = pd.read_csv(path / "garage_operations_log.csv")
-    ind_logs = pd.read_csv(path / "industrial_operations_log.csv")
+    ped_logs = pd.read_sql_table("pedestrian_operations_log", con=engine)
+    gar_logs = pd.read_sql_table("garage_operations_log", con=engine)
+    ind_logs = pd.read_sql_table("industrial_operations_log", con=engine)
     
     all_logs_df = pd.concat([ped_logs, gar_logs, ind_logs], ignore_index=True)
     
-    # Ensure timestamps are datetime objects
+    # FIX: forzar str puro en TODOS los dataframes que vienen de SQL
+    for d in (incidents_df, maintenance_df, all_logs_df):
+        d.columns = [str(c) for c in d.columns]
+    
     incidents_df['timestamp'] = pd.to_datetime(incidents_df['timestamp'])
     all_logs_df['timestamp'] = pd.to_datetime(all_logs_df['timestamp'])
     
@@ -53,51 +72,36 @@ def load_data(data_dir: str = "datasets"):
 # --- SECTION 2: TARGET & TIME-WINDOW GENERATION ---
 
 def build_target_dataframe(incidents_df: pd.DataFrame, maintenance_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Sorts incidents chronologically per door and calculates the time until 
-    the NEXT failure. Also captures the PREVIOUS failure timestamp to define 
-    the feature extraction window (t_i-1, t_i].
-    Includes 'phantom' rows for doors with zero incidents to enable inference.
-    """
     print("Building target variables and time windows...")
     
-    # 1. Process doors with incidents
     df = incidents_df.sort_values(["door_id", "timestamp"]).copy()
     df["next_timestamp"] = df.groupby("door_id")["timestamp"].shift(-1)
     df["prev_timestamp"] = df.groupby("door_id")["timestamp"].shift(1)
     df["days_to_next_failure"] = (df["next_timestamp"] - df["timestamp"]).dt.total_seconds() / (60 * 60 * 24)
     
-    # 2. Handle doors with NO incidents (The 'invincible' doors)
-    # Find doors in maintenance that are NOT in incidents
     all_doors = set(maintenance_df['door_id'])
     incident_doors = set(df['door_id'])
     missing_doors = list(all_doors - incident_doors)
     
     if missing_doors:
-        # We need a reference 'current time' for these doors to extract their logs up to now.
-        # We'll use the maximum timestamp found in the entire incidents dataset as "now".
         current_time = df['timestamp'].max()
-        
         missing_rows = []
         for door in missing_doors:
-            # We fetch its static info from maintenance to match the columns
             static_info = maintenance_df[maintenance_df['door_id'] == door].iloc[0]
-            # Assume it's a home door by default if not specified elsewhere (adjust if needed based on ID prefix)
             door_type = "ECOline Home" if door.startswith("G-") else ("ROLLfast Industrial 300" if door.startswith("I-") else "ECOline Pedestrian")
             
             missing_rows.append({
                 'door_id': door,
-                'timestamp': current_time, # Extract all logs up to this point
+                'timestamp': current_time, 
                 'next_timestamp': pd.NaT,
-                'prev_timestamp': pd.NaT, # No previous failure
-                'days_to_next_failure': np.nan, # Needs prediction
+                'prev_timestamp': pd.NaT, 
+                'days_to_next_failure': np.nan, 
                 'door_type': door_type,
-                'usage_scenario': 'low', # Safe default for missing contextual data
+                'usage_scenario': 'low', 
                 'installation_environment': 'Unknown'
             })
             
         missing_df = pd.DataFrame(missing_rows)
-        # Append the missing doors as active (NaN target) to the main target dataframe
         df = pd.concat([df, missing_df], ignore_index=True)
         print(f"Added {len(missing_doors)} active doors with zero previous incidents for prediction.")
         
@@ -106,16 +110,9 @@ def build_target_dataframe(incidents_df: pd.DataFrame, maintenance_df: pd.DataFr
 # --- SECTION 3: TEMPORAL FEATURE ENGINEERING ---
 
 def extract_windowed_features(target_df: pd.DataFrame, logs_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Iterates through each incident and calculates features based ONLY on the logs
-    that occurred between the previous incident and the current incident.
-    This strictly prevents temporal data leakage.
-    """
     print("Extracting time-windowed features (this may take a moment)...")
     
-    # Sort logs to optimize filtering
     logs_df = logs_df.sort_values(["door_id", "timestamp"])
-    
     features_list = []
     
     for _, row in target_df.iterrows():
@@ -123,19 +120,14 @@ def extract_windowed_features(target_df: pd.DataFrame, logs_df: pd.DataFrame) ->
         t_curr = row['timestamp']
         t_prev = row['prev_timestamp']
         
-        # Filter logs for this specific door
         door_logs = logs_df[logs_df['door_id'] == door]
-        
-        # Temporal filtering: Logs must be BEFORE or AT current incident
         mask = (door_logs['timestamp'] <= t_curr)
         
-        # If there was a previous incident, logs must be strictly AFTER it
         if pd.notnull(t_prev):
             mask = mask & (door_logs['timestamp'] > t_prev)
             
         window_logs = door_logs[mask]
         
-        # Initialize feature dictionary for this row
         row_features = {
             'incident_id': row.get('incident_id', f"{door}_{t_curr}"),
             'door_id': door,
@@ -146,15 +138,12 @@ def extract_windowed_features(target_df: pd.DataFrame, logs_df: pd.DataFrame) ->
             'installation_environment': row.get('installation_environment', 'Unknown')
         }
         
-        # Aggregate logic
         if not window_logs.empty:
             row_features['motor_temp_mean'] = window_logs['motor_temperature'].mean() if 'motor_temperature' in window_logs else np.nan
             row_features['motor_temp_max'] = window_logs['motor_temperature'].max() if 'motor_temperature' in window_logs else np.nan
-            
             row_features['motor_torque_mean'] = window_logs['motor_torque'].mean() if 'motor_torque' in window_logs else np.nan
             row_features['motor_torque_max'] = window_logs['motor_torque'].max() if 'motor_torque' in window_logs else np.nan
             
-            # Categorical counts (convert to bool, fillna with False, then sum)
             if 'emergency_stop_activated' in window_logs:
                 row_features['emergency_stops_count'] = window_logs['emergency_stop_activated'].fillna(False).astype(bool).sum()
             else:
@@ -165,7 +154,6 @@ def extract_windowed_features(target_df: pd.DataFrame, logs_df: pd.DataFrame) ->
             else:
                 row_features['photocell_blocks_count'] = 0
         else:
-            # If no logs fall in this window, fill with NaNs (Pipeline will impute later)
             row_features['motor_temp_mean'] = np.nan
             row_features['motor_temp_max'] = np.nan
             row_features['motor_torque_mean'] = np.nan
@@ -179,28 +167,26 @@ def extract_windowed_features(target_df: pd.DataFrame, logs_df: pd.DataFrame) ->
 
 # --- SECTION 4: DATASET INTEGRATION ---
 
+# --- SECTION 4: DATASET INTEGRATION ---
+
 def build_modeling_dataset(temporal_features_df: pd.DataFrame, maintenance_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Merges the dynamic temporal features with the static historical maintenance features.
-    """
     print("Merging temporal and static features...")
-    
-    # We drop 'days_to_next_failure' from maintenance_df because we computed the accurate temporal one
     static_df = maintenance_df[['door_id', 'maintenance_type', 'number_of_past_failures']].copy()
-    
     final_df = pd.merge(temporal_features_df, static_df, on='door_id', how='left')
+    
+    # SOLUCIÓN: Convertir todos los nombres de columnas a string normal
+    # para evitar conflictos entre SQLAlchemy 'quoted_name' y los 'str' de Pandas
+    final_df.columns = [str(c) for c in final_df.columns]
+    
     return final_df
 
 # --- SECTION 5: MODEL TRAINING & INFERENCE ---
 
-def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
-    """
-    Splits data into historical (train/test) and current active states (inference).
-    Trains the Random Forest, outputs the ranking, and saves the final predictions.
-    """
+def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_df: pd.DataFrame):
     print("\n--- Training Predictive Model ---")
+
+    df.columns = [str(c) for c in df.columns]
     
-    # 1. Define Features
     numeric_features = [
         'motor_temp_mean', 'motor_temp_max', 'motor_torque_mean', 
         'motor_torque_max', 'emergency_stops_count', 'photocell_blocks_count',
@@ -208,7 +194,6 @@ def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
     ]
     categorical_features = ['door_type', 'usage_scenario', 'installation_environment', 'maintenance_type']
     
-    # 2. Split into Historical (has target) and Active (needs prediction)
     historical_data = df[df['days_to_next_failure'].notna()].copy()
     active_doors = df[df['days_to_next_failure'].isna()].copy()
     
@@ -216,10 +201,8 @@ def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
     y_hist = historical_data['days_to_next_failure']
     X_active = active_doors[numeric_features + categorical_features]
     
-    # Train/Test Split
     X_train, X_test, y_train, y_test = train_test_split(X_hist, y_hist, test_size=0.30, random_state=42)
     
-    # 3. Build Pipeline
     num_transformer = Pipeline(steps=[('imputer', SimpleImputer(strategy='median'))])
     cat_transformer = Pipeline(steps=[
         ('imputer', SimpleImputer(strategy='most_frequent')),
@@ -235,17 +218,14 @@ def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
         ('regressor', RandomForestRegressor(n_estimators=300, random_state=42, n_jobs=-1))
     ])
     
-    # 4. Train & Evaluate
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
     
     print("=== Regression Evaluation on Test Set ===")
     print(f"MAE  (days): {mean_absolute_error(y_test, y_pred):.3f}")
-    # Fix for newer sklearn versions:
     print(f"RMSE (days): {np.sqrt(mean_squared_error(y_test, y_pred)):.3f}")
     print(f"R^2        : {r2_score(y_test, y_pred):.3f}")
     
-    # 5. Inference & Ranking
     print("\n--- Generating Decision Support Output ---")
     active_doors['predicted_days_to_failure'] = model.predict(X_active)
     ranking = active_doors.sort_values("predicted_days_to_failure", ascending=True)
@@ -254,45 +234,77 @@ def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
     print(f"\n=== Top 10 Doors Predicted to Fail Sooner (Urgent Maintenance) ===")
     print(ranking[cols_to_show].head(10).to_string(index=False))
     
-    # 6. SAVE PREDICTIONS BACK TO MAINTENANCE HISTORY
-    print("\n--- Saving Final Predictions to Maintenance History ---")
-    # Load the original maintenance history
-    maintenance_update_df = pd.read_csv(original_maintenance_path)
-    
-    # Create a mapping dictionary: {door_id: predicted_days}
+    # Preparamos el dataframe final con las predicciones unidas
+    maintenance_update_df = original_maintenance_df.copy()
     prediction_map = dict(zip(active_doors['door_id'], active_doors['predicted_days_to_failure']))
-    
-    # Fill the 'days_to_next_failure' column
     maintenance_update_df['days_to_next_failure'] = maintenance_update_df['door_id'].map(prediction_map)
     
-    # Export the final populated dataset
-    output_path = Path("regression/predicted_maintenance_history.csv")
-    maintenance_update_df.to_csv(output_path, index=False)
-    print(f"Predictions successfully merged and saved to: {output_path}")
+    return maintenance_update_df
 
 # --- MAIN EXECUTION ---
 
 def main():
-    # 1. Load Data
-    incidents_df, maintenance_df, all_logs_df = load_data()
+    # 1. Crear conexión a la base de datos
+    engine = get_db_engine()
     
-    # 2. Build Targets (Now passing maintenance_df to catch missing doors)
+    # 2. Leer datos directamente de MySQL
+    incidents_df, maintenance_df, all_logs_df = load_data(engine)
+    
+    # 3. Construir targets y features temporales
     target_df = build_target_dataframe(incidents_df, maintenance_df)
-    
-    # 3. Extract Leakage-Free Features
     temporal_features_df = extract_windowed_features(target_df, all_logs_df)
     
-    # 4. Build Final Dataset
+    # 4. Construir dataset final para el modelo
     final_modeling_df = build_modeling_dataset(temporal_features_df, maintenance_df)
     
-    # 5. Save the final formatted modeling table
-    output_path = Path("regression/regression_failure.csv")
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    final_modeling_df.to_csv(output_path, index=False)
-    print(f"\nModeling dataset successfully saved to: {output_path}")
+    # Guardar CSV intermedio (opcional pero útil para debug)
+    modeling_output_path = "regression/regression_failure.csv"
+    final_modeling_df.to_csv(modeling_output_path, index=False)
+    print(f"\nModeling dataset successfully saved to: {modeling_output_path}")
     
-    # 6. Train and Rank (Now passing the path to original maintenance file)
-    train_evaluate_and_rank(final_modeling_df, "datasets/erreka_maintenance_history.csv")
+    # 5. Entrenar modelo y obtener el dataframe final con las predicciones añadidas
+    predicted_df = train_evaluate_and_rank(final_modeling_df, maintenance_df)
+    
+    # 6. GUARDAR EN CSV LOCAL (Mantiene la ruta que pediste)
+    predictions_output_path = "regression/predicted_maintenance_history.csv"
+    predicted_df.to_csv(predictions_output_path, index=False)
+    print(f"\nPredictions successfully saved to local CSV: {predictions_output_path}")
+
+    # 7. CARGA DIRECTA A MYSQL (Sustituye al script load_predictions_etl.py)
+    print("\n=====================================================")
+    print("STARTING DIRECT LOAD TO MYSQL")
+    print("=====================================================")
+    
+    # Limpieza básica para asegurar compatibilidad en SQL (igual que en tu ETL)
+    predicted_df.dropna(how="all", inplace=True)
+    
+    for col in predicted_df.select_dtypes(include=["object"]).columns:
+        predicted_df[col] = predicted_df[col].astype(str).str.strip()
+        predicted_df[col] = predicted_df[col].replace('nan', None)
+
+    # Lógica de fechas restaurada
+    for col in predicted_df.columns:
+        if 'date' in col.lower() or 'time' in col.lower():
+            try:
+                predicted_df[col] = pd.to_datetime(predicted_df[col])
+            except Exception:
+                pass
+
+    try:
+        predicted_df.to_sql(
+            name="predicted_maintenance_history",
+            con=engine,
+            if_exists="replace", # Reemplaza los datos con la nueva predicción de hoy
+            index=False,
+            chunksize=10000
+        )
+        print("     [+] Loaded: Data successfully inserted/replaced into MySQL table 'predicted_maintenance_history'.")
+    except Exception as e:
+        print(f"     [x] ERROR: Failed to upload to MySQL. Reason: {e}")
+        
+    print("\n=====================================================")
+    print("PIPELINE COMPLETED SUCCESSFULLY.")
+    print("=====================================================")
 
 if __name__ == "__main__":
     main()

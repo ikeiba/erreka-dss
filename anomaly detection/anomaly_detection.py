@@ -15,7 +15,7 @@ MYSQL_HOST     = "localhost"
 MYSQL_PORT     = int(os.getenv("MYSQL_PORT", "3306"))
 MYSQL_USER     = "root"
 MYSQL_PASSWORD = os.getenv("ROOT_PASSWORD")
-MYSQL_DB       = os.getenv("MYSQL_DATABASE", "erreka_dss")
+MYSQL_DB       = os.getenv("MYSQL_DATABASE", "erreka_dss_demo")
 
 CONTAMINATION  = 0.10  # fracción esperada de puertas anómalas (~10%)
 
