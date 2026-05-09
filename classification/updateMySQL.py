@@ -3,6 +3,8 @@ from sqlalchemy import create_engine, text
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 # MySQL credentials
 DB_HOST = os.getenv("MYSQL_HOST", "127.0.0.1") 
 DB_USER = os.getenv("MYSQL_USER", "root")

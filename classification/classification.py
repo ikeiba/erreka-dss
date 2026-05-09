@@ -9,6 +9,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import os
 from dotenv import load_dotenv
+# Load environment variables
+load_dotenv()
 
 # MySQL credentials
 DB_HOST = os.getenv("MYSQL_HOST", "127.0.0.1") 
@@ -22,7 +24,7 @@ engine = create_engine(f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST
 # Conection to mysql
 def obtener_conexion():
     """Establece conexión con el Data Warehouse."""
-    return create_engine("mysql+mysqlconnector://root:admin@localhost:3307/erreka_dss")
+    return create_engine(engine)
 
 # Dataset construction
 def construir_dataset_temporal(engine, fecha_corte, horas_pasado=48, es_entrenamiento=True):

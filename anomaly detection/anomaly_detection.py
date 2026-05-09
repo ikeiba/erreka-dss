@@ -11,16 +11,24 @@ load_dotenv()
 # ─────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────
+<<<<<<< HEAD
 MYSQL_HOST     = "localhost"
 MYSQL_PORT     = int(os.getenv("MYSQL_PORT", "3306"))
 MYSQL_USER     = "root"
 MYSQL_PASSWORD = os.getenv("ROOT_PASSWORD")
 MYSQL_DB       = os.getenv("MYSQL_DATABASE", "erreka_dss_demo")
+=======
+DB_HOST     = os.getenv("MYSQL_HOST", "localhost")
+DB_PORT     = int(os.getenv("MYSQL_PORT", "3306"))
+DB_USER     = os.getenv("MYSQL_USER", "root")
+DB_PASSWORD = os.getenv("ROOT_PASSWORD")
+DB_NAME       = os.getenv("MYSQL_DATABASE", "erreka_dss")
+>>>>>>> 0cc6e03fa0e3a7f716b4e047d89fcc10a7e2d042
 
 CONTAMINATION  = 0.10  # fracción esperada de puertas anómalas (~10%)
 
 engine = create_engine(
-    f"mysql+mysqlconnector://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB}"
+    f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 )
 print("Connection to MySQL established successfully.")
 
