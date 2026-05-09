@@ -274,7 +274,7 @@ def train_evaluate_and_rank(df: pd.DataFrame, original_maintenance_path: str):
 
 def main():
     # 1. Load Data
-    incidents_df, maintenance_df, all_logs_df = load_data("data")
+    incidents_df, maintenance_df, all_logs_df = load_data()
     
     # 2. Build Targets (Now passing maintenance_df to catch missing doors)
     target_df = build_target_dataframe(incidents_df, maintenance_df)
