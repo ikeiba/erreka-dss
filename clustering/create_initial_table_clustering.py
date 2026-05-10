@@ -278,10 +278,6 @@ def main():
         insert_metrics(connection, cursor, merged)
         validate(cursor)
 
-        print(f"\nExporting CSV to {OUTPUT_CSV}...")
-        merged[METRIC_COLUMNS].to_csv(OUTPUT_CSV, index=False)
-        print(f"  ✓ Wrote {len(merged)} rows to {OUTPUT_CSV}")
-
         describe_numeric(merged)
 
         print("\n" + "=" * 60)
