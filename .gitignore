@@ -3,3 +3,5 @@ datasets/
 .vscode/
 regression/*.csv
 classification/*.csv
+etl copy.py
+.DS_Store
