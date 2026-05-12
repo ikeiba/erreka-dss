@@ -2,7 +2,7 @@
 # 1. IMPORTS
 # ----------------------------------------------------------
 import pandas as pd # We will use the easiest/most modern approach, which is pandas
-from sqlalchemy import create_engine, inspect
+from sqlalchemy import create_engine, inspect, text
 import os
 from dotenv import load_dotenv # This will allow us to "hide" our credentials
 
@@ -109,8 +109,44 @@ for table_name, file_path in ETL_FILES.items():
         )
         print(f"     [+] Loaded: Data successfully inserted into MySQL table '{table_name}'.")
 
+        # --- VALIDATION ---
+        with engine.connect() as conn:
+            result = conn.execute(text(f"SELECT COUNT(*) FROM `{table_name}`"))
+            db_count = result.scalar()
+
+        local_count = len(df)
+        if db_count == local_count:
+            print(f"     [+] Validation passed: {db_count} rows in database match source ({local_count}).")
+        else:
+            print(f"     [!] Validation failed: source has {local_count} rows but database has {db_count} rows.")
+
     except Exception as e:
         print(f"     [x] ERROR: Failed to process '{table_name}'. Reason: {e}")
+
+sql_query = text("""
+SELECT 
+    country_name AS 'País',
+    SUM(CASE WHEN door_type = 'ECOline Pedestrian' THEN 1 ELSE 0 END) AS 'ECOline Pedestrian',
+    SUM(CASE WHEN door_type = 'ROLLfast Industrial 300' THEN 1 ELSE 0 END) AS 'ROLLfast Industrial 300',
+    SUM(CASE WHEN door_type = 'ECOline Home' THEN 1 ELSE 0 END) AS 'ECOline Home'
+FROM doors_registry
+GROUP BY country_name
+ORDER BY COUNT(*) DESC;
+""")
+
+try:
+    with engine.connect() as con:
+        result = con.execute(sql_query)
+        rows = result.fetchall()
+        columns = result.keys()
+
+    sql_result = pd.DataFrame(rows, columns=columns)
+
+    print("\nVALIDATION QUERY RESULT:.............")
+    print(sql_result)
+
+except Exception as e:
+    print(f"SQL Validation query Error: {e}")
 
 # ----------------------------------------------------------
 # 6. END
