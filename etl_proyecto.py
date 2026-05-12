@@ -90,9 +90,12 @@ for table_name, file_path in ETL_FILES.items():
         # 3. We parse date:
         # If the column has the word date or time, we transform it into the date format
         for col in df.columns:
-            if 'date' in col.lower() or 'time' in col.lower():
+            if (
+                ('date' in col.lower() or 'time' in col.lower())
+                and 'downtime' not in col.lower()
+            ):
                 try:
-                    df[col] = pd.to_datetime(df[col]) # Parsing the date type
+                    df[col] = pd.to_datetime(df[col])
                 except Exception:
                     pass
 
