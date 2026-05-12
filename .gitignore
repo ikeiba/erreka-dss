@@ -1,7 +1,5 @@
 .env
-datasets/pedestrian_operations_log.csv
-datasets/industrial_operations_log.csv
-datasets/garage_operations_log.csv
+datasets/
 .vscode/
 regression/*.csv
 classification/*.csv

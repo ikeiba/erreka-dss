@@ -34,7 +34,8 @@ ETL_FILES = {
     "industrial_operations_log": "datasets/industrial_operations_log.csv",
     "pedestrian_operations_log": "datasets/pedestrian_operations_log.csv",
     "risk_factors": "datasets/risk_factors.csv",
-    "installed_base": "datasets/installed_base.csv"
+    "installed_base": "datasets/installed_base.csv",
+    "maintenance_recommendations": "datasets/maintenance_recommendations.csv"
 }
 
 # ----------------------------------------------------------
