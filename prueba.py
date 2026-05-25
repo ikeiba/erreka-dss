@@ -265,8 +265,60 @@ for table_name, file_path in ETL_FILES.items():
         print(f"     [x] ERROR: Failed to process '{table_name}'. Reason: {e}")
 
 # ----------------------------------------------------------
-# 6. END
+# 6. ETL FINISHED
 # ----------------------------------------------------------
 print("\n=====================================================")
 print("ETL PROCESS COMPLETED SUCCESSFULLY.")
 print("=====================================================")
+
+
+
+# ----------------------------------------------------------
+# 7. Validation
+# ----------------------------------------------------------
+
+# Row counts: compare CSV file shape vs database table shape
+for table, file_path in ETL_FILES.items():
+    if not os.path.exists(file_path):
+        print(f"\n{table}.............")
+        print(f"CSV file {file_path} not found. Skipping validation.")
+        continue
+
+    df = pd.read_csv(file_path)
+    with engine.connect() as con:
+        try:
+            sql_df = pd.read_sql(text(f"SELECT * FROM {table}"), con)
+            print(f"\n{table}.............")
+            print(f"Shape tabla CSV ={df.shape}")
+            print(f"Shape tabla SQL ={sql_df.shape}")
+
+        except Exception as e:
+            print(f"SQL Error Select in table: {table} --- Error: {e}")
+            continue
+
+# Traceability example query
+sql_query = text("""
+SELECT 
+    log.timestamp AS log_timestamp,
+    reg.door_id,
+    reg.installation_environment,
+    ctx.criticality_level,
+    ctx.sla_category
+FROM pedestrian_operations_log AS log
+JOIN doors_registry AS reg ON log.door_id = reg.door_id
+JOIN context_criticality AS ctx ON reg.installation_environment = ctx.environment_type
+LIMIT 10;
+""")
+
+with engine.connect() as con:
+    try:
+        sql_result = pd.read_sql(sql_query, con)
+        print(f"\nVALIDATION QUERY RESULT:.............")
+        print(sql_result)
+
+    except Exception as e:
+        print(f"SQL Validation query Error: {e}")
+        pass
+
+
+# Criticality_level = impact if the door fails (safety of people, operational continuity, operating environment)
